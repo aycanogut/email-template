@@ -4,81 +4,91 @@ import {
   Body,
   Container,
   Head,
-  Heading,
   Html,
-  Img,
-  Link,
-  Preview,
   Row,
-  Text,
 } from "@react-email/components";
 
-import { render } from '@react-email/render';
+import Image from "../components/Image";
+import Header from "../components/Header";
+import Text from "../components/Text";
+import Link from "../components/Link";
+import ImageGrid from "../components/ImageGrid";
 
 export const EmailTemplate = () => (
   <Html>
     <Head />
-    <Preview>Log in with this magic link</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Heading style={h1}>Efe Karadağlı</Heading>
         <Row>
-          <Heading
-            style={{
-              ...text,
-              color: "#ababab",
-              marginTop: "14px",
-              marginBottom: "16px",
-            }}
-          >
-            %100 Açık Sahne - In Memory of Tolga Akyıldız
-          </Heading>
-
-          <Text
-            style={{
-              ...text,
-              color: "#ababab",
-              marginTop: "14px",
-              marginBottom: "16px",
-            }}
-          >
-            Tolga Akyıldız was a Turkish journalist known for his music writings and organizations.
+          <Header title='%100 Açık Sahne - In Memory of Tolga Akyıldız' />
+          <Text textContent='Tolga Akyıldız was a Turkish journalist known for his music writings and organizations.
             Unfortunately, he passed away in April 2023.
             "100% Open Stage" was a series of concerts he organized for 9 years. Before his death, he announced that my favorite band, Second, would perform on the show. After he has gone, it was decided that this concert would be held in his memory.
 
             And throughout their performance, talented names such as Batu Akdeniz, Can Temiz, In Hoodies, Melis Karaduman, Nilipek, Padme, Samet Çiçek and Övünç Dan accompanied Second.
 
             It is an honor for me to prepare the poster for this meaningful event.
-            Rest his soul in melodies 🖤🤘
-          </Text>
+            Rest his soul in melodies 🖤🤘' />
 
-          <Link
-            href="https://efekaradagli.com/100-acik-sahne-in-memory-of-tolga-akyildiz"
-            target="_blank"
-            style={{
-              ...link,
-              display: "block",
-              marginBlock: "16px",
-            }}
-          >
-            <Img
-              src="https://cdn.myportfolio.com/b560a0ed-ca38-4bd4-a052-9073d156c878/cecc6a31-1883-493c-b9f6-05eb5d008e52_rw_1200.jpg?h=6bd68f1030191eb2284fc07ce205498a"
-              width="100%"
-              height="100%"
-            />
-          </Link>
+          <Image
+            linkUrl="https://efekaradagli.com/100-acik-sahne-in-memory-of-tolga-akyildiz"
+            imageUrl='https://cdn.myportfolio.com/b560a0ed-ca38-4bd4-a052-9073d156c878/cecc6a31-1883-493c-b9f6-05eb5d008e52_rw_1200.jpg?h=6bd68f1030191eb2284fc07ce205498a'
+            imageWidth="200px"
+            centered
+          />
 
-          <Link
-            href="https://efekaradagli.com/100-acik-sahne-in-memory-of-tolga-akyildiz"
-            target="_blank"
-            style={{
-              ...link,
-              display: "block",
-              marginBlock: "16px",
-            }}
-          >
-            Detay sayfasına git
-          </Link>
+          <Image
+            linkUrl="https://efekaradagli.com/100-acik-sahne-in-memory-of-tolga-akyildiz"
+            imageUrl='https://cdn.myportfolio.com/b560a0ed-ca38-4bd4-a052-9073d156c878/cecc6a31-1883-493c-b9f6-05eb5d008e52_rw_1200.jpg?h=6bd68f1030191eb2284fc07ce205498a'
+            imageWidth="200px"
+          />
+
+          <Link url="https://efekaradagli.com/100-acik-sahne-in-memory-of-tolga-akyildiz" title="Detay Sayfasina Git" />
+
+          <ImageGrid
+
+            items={[
+              {
+                id: 1,
+                linkUrl: "https://efekaradagli.com/100-acik-sahne-in-memory-of-tolga-akyildiz",
+                imageUrl: "https://cdn.myportfolio.com/b560a0ed-ca38-4bd4-a052-9073d156c878/cecc6a31-1883-493c-b9f6-05eb5d008e52_rw_1200.jpg?h=6bd68f1030191eb2284fc07ce205498a",
+                imageWidth: "80px",
+                imageHeight: "auto",
+                centered: true
+              },
+              {
+                id: 2,
+                linkUrl: "https://efekaradagli.com/100-acik-sahne-in-memory-of-tolga-akyildiz",
+                imageUrl: "https://cdn.myportfolio.com/b560a0ed-ca38-4bd4-a052-9073d156c878/cecc6a31-1883-493c-b9f6-05eb5d008e52_rw_1200.jpg?h=6bd68f1030191eb2284fc07ce205498a",
+                imageWidth: "80px",
+                imageHeight: "auto",
+                centered: true
+              },
+              {
+                id: 3,
+                linkUrl: "https://efekaradagli.com/100-acik-sahne-in-memory-of-tolga-akyildiz",
+                imageUrl: "https://cdn.myportfolio.com/b560a0ed-ca38-4bd4-a052-9073d156c878/cecc6a31-1883-493c-b9f6-05eb5d008e52_rw_1200.jpg?h=6bd68f1030191eb2284fc07ce205498a",
+                imageWidth: "80px",
+                imageHeight: "auto",
+                centered: true
+              },
+              {
+                id: 4,
+                linkUrl: "https://efekaradagli.com/100-acik-sahne-in-memory-of-tolga-akyildiz",
+                imageUrl: "https://cdn.myportfolio.com/b560a0ed-ca38-4bd4-a052-9073d156c878/cecc6a31-1883-493c-b9f6-05eb5d008e52_rw_1200.jpg?h=6bd68f1030191eb2284fc07ce205498a",
+                imageWidth: "80px",
+                imageHeight: "auto",
+                centered: true
+              },
+              {
+                id: 5,
+                linkUrl: "https://efekaradagli.com/100-acik-sahne-in-memory-of-tolga-akyildiz",
+                imageUrl: "https://cdn.myportfolio.com/b560a0ed-ca38-4bd4-a052-9073d156c878/cecc6a31-1883-493c-b9f6-05eb5d008e52_rw_1200.jpg?h=6bd68f1030191eb2284fc07ce205498a",
+                imageWidth: "80px",
+                imageHeight: "auto",
+                centered: true
+              },
+            ]} />
         </Row>
       </Container>
     </Body>
@@ -106,45 +116,3 @@ const h1 = {
   margin: "40px 0",
   padding: "0",
 };
-
-const link = {
-  color: "#2754C5",
-  fontFamily:
-    "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
-  fontSize: "14px",
-  textDecoration: "underline",
-};
-
-const text = {
-  color: "#333",
-  fontFamily:
-    "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
-  fontSize: "14px",
-  margin: "24px 0",
-};
-
-const footer = {
-  color: "#898989",
-  fontFamily:
-    "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
-  fontSize: "12px",
-  lineHeight: "22px",
-  marginTop: "12px",
-  marginBottom: "24px",
-};
-
-const code = {
-  display: "inline-block",
-  padding: "16px 4.5%",
-  width: "90.5%",
-  backgroundColor: "#f4f4f4",
-  borderRadius: "5px",
-  border: "1px solid #eee",
-  color: "#333",
-};
-
-const html = render(<EmailTemplate />, {
-  pretty: true,
-});
-
-console.log(html);
