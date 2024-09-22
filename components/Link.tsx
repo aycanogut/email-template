@@ -16,7 +16,7 @@ function Link({ url, title, centered = false }: Props) {
       ...link,
       display: "block",
       textAlign: centered ? "center" : "left",
-      marginBlock: "16px",
+      marginBlock: 24
     }}
   >
     {title}

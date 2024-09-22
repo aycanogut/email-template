@@ -11,8 +11,7 @@ function Text({ textContent }: Props) {
     style={{
       ...text,
       color: "#ababab",
-      marginTop: "14px",
-      marginBottom: "16px",
+      marginBlock: 24
     }}
   >
     {textContent}

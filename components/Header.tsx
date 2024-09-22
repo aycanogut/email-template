@@ -12,8 +12,7 @@ function Header({ title, centered = false }: Props) {
     ...text,
     textAlign: centered ? "center" : "left",
     color: "#000",
-    marginTop: "14px",
-    marginBottom: "16px",
+    marginBlock: 24
   }}
   >
     {title}

@@ -18,7 +18,7 @@ function Image({ linkUrl, imageUrl, imageWidth, imageHeight, centered = false }:
       ...link,
       display: "flex",
       justifyContent: centered ? "center" : "flex-start",
-      marginBlock: "16px",
+      marginBlock: 24
     }}
   >
     <Img
